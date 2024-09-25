@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="kr">
+<head>
+    <meta charset="utf-8">
+    <title>Q3</title>
+    <style>
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 100vw;
+            max-height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+
+
+    <script language="JavaScript">
+        function layer1(){
+            map.style.visibility = "hidden"
+        }
+
+        function layer2(){
+            map.style.visibility = "visible"
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <input type="radio" id="one" name="vis" value="1" onclick="layer1()"> 숨기기
+        <input type="radio" id="two" name="vis" value="2" onclick="layer2()"> 보이기
+    </div>
+    <div id="map">
+        <script>
+            var map = document.createElement('img');
+            map.setAttribute('src', 'week3_3_img.png');
+            map.setAttribute('style', 'width:100%; height:100%; object-fit:cover; max-width:100vw; max-height:100vh;');
+
+            document.body.appendChild(map);
+        </script>
+    </div>
+</body>
+</html>
